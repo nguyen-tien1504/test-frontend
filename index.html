@@ -1,12 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Frontend Nguyễn Đức Tiến</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+      body {
+        box-sizing: border-box;
+        padding: 0;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 18px;
+      }
+      a {
+        color: black;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="flex items-center gap-[240px] justify-center bg-[#383d40] py-2"
+    >
+      <img
+        src="./img/02d0f86ab2ac4d7f870a50b4e40fbd0f.jpg"
+        alt="logo"
+        class="w-[184px] h-[73px]"
+      />
+      <div>
+        <ul class="list-none flex gap-[76px] text-white text-lg leading-[25px]">
+          <li><a href="">Home</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="relative">
+      <img
+        src="./img/907e6e6909cece4a271d530553cd4c73.png"
+        alt="banner"
+        class="w-full"
+      />
+      <div class="absolute bottom-48 left-1/2">
+        <span
+          class="h-[14px] w-[14px] bg-white inline-block rounded-[50%]"
+        ></span>
+        <span
+          class="h-[14px] w-[14px] bg-white inline-block rounded-[50%]"
+        ></span>
+        <span
+          class="h-[14px] w-[14px] bg-white inline-block rounded-[50%]"
+        ></span>
+        <span
+          class="h-[14px] w-[14px] bg-white inline-block rounded-[50%]"
+        ></span>
+      </div>
+    </div>
+
+    <main class="px-[200px] mt-[150px]">
+      <iframe
+        src="https://www.youtube.com/embed/v660bnTDglM"
+        frameborder="1"
+        class="w-full h-[400px]"
+      ></iframe>
+
+      <div class="mt-[170px] flex gap-[50px] items-center">
+        <div class="relative">
+          <img
+            src="./img/iPhone 12 Mini.png"
+            alt="iPhone 12 Mini "
+            class="ml-36"
+          />
+          <img
+            src="./img/iPhone 12 Mini.png"
+            alt="iPhone 12 Mini"
+            class="absolute inset-0"
+          />
+        </div>
+        <div class="w-1/2">
+          <p class="font-medium text-4xl leading-10">Apps for customers</p>
+          <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
+            The general idea behind "diversification" is to provide a Service
+            ecosystem that fully caters to all customer needs from the smallest
+            needs
+          </p>
+          <div class="flex gap-8 mt-8">
+            <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
+            <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
+          </div>
+          <div class="flex justify-center mt-[42px]">
+            <a
+              href=""
+              class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
+              >See more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke-width="6"
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="bg-[#F2F8FF] flex flex-col items-center mt-20 py-8 px-[100px]"
+      >
+        <p class="font-medium text-4xl leading-10 py-16">
+          Outstanding features of the Client App
+        </p>
+        <div class="flex gap-8 items-center">
+          <img
+            src="./img/iPhone 12 Mini.png"
+            alt=""
+            width="224px"
+            height="485.5px"
+          />
+          <div>
+            <div>
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <span
+                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                    >1</span
+                  >
+                  <div class="mt-1 flex flex-col items-center">
+                    <p
+                      class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
+                    ></p>
+                    <div class="text-[#666] -mt-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-xl leading-8 font-normal">
+                    Search service in just one button
+                  </p>
+                  <p class="font-normal leading-6 text-[#666666]">
+                    Enjoy convenience in just one app.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <span
+                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                    >2</span
+                  >
+                  <div class="mt-1 flex flex-col items-center">
+                    <p
+                      class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
+                    ></p>
+                    <div class="text-[#666] -mt-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-xl leading-8 font-normal">
+                    Connecting diverse information
+                  </p>
+                  <p class="font-normal leading-6 text-[#666666]">
+                    Not only chat now you can voice chat and make calls to
+                    quickly connect with the performer
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <span
+                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                    >3</span
+                  >
+                  <div class="mt-1 flex flex-col items-center">
+                    <p
+                      class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
+                    ></p>
+                    <div class="text-[#666] -mt-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        fill="currentColor"
+                        class="bi bi-chevron-down"
+                        viewBox="0 0 16 16"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p class="text-xl leading-8 font-normal">
+                    Update status service
+                  </p>
+                  <p class="font-normal leading-6 text-[#666666]">
+                    You can know the status of repair or work completed while
+                    away from home.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex gap-4">
+                <div class="flex flex-col items-center">
+                  <span
+                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                    >4</span
+                  >
+                </div>
+                <div>
+                  <p class="text-xl leading-8 font-normal">
+                    Complete safe and quality service
+                  </p>
+                  <p class="font-normal leading-6 text-[#666666]">
+                    You will feel secure when you see the report image and
+                    easily evaluate quality service whenever
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-[170px] flex flex-row-reverse gap-[50px] items-center">
+        <div class="relative">
+          <img
+            src="./img/iPhone 12 Mini.png"
+            alt="iPhone 12 Mini "
+            class="ml-36"
+          />
+          <img
+            src="./img/iPhone 12 Mini.png"
+            alt="iPhone 12 Mini"
+            class="absolute inset-0"
+          />
+        </div>
+        <div class="w-1/2">
+          <p class="font-medium text-4xl leading-10">Apps for Business</p>
+          <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
+            One of the advantages of Multi-Industry Services is that it helps
+            reduce the impact of unexpected fluctuations in any one industry.
+            Bringing diverse consumers to businesses
+          </p>
+          <div class="flex gap-8 mt-8">
+            <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
+            <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
+          </div>
+          <div class="flex justify-center mt-[42px]">
+            <a
+              href=""
+              class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
+              >See more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke-width="6"
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-[170px] flex gap-[50px] items-center">
+        <div>
+          <img
+            src="./img/Apple Macbook Pro 15_ Space Grey.png"
+            alt=""
+            width="450px"
+          />
+        </div>
+        <div class="w-1/2">
+          <p class="font-medium text-4xl leading-10">Apps for Managers</p>
+          <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
+            Each branch of service provides is independent of the other business
+            areas, but the activities of the services will be reported to senior
+            management of the company that owns the application.
+          </p>
+          <div class="flex gap-8 mt-8">
+            <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
+            <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
+          </div>
+          <div class="flex justify-center mt-[42px]">
+            <a
+              href=""
+              class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
+              >See more
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-chevron-down"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  stroke-width="6"
+                  fill-rule="evenodd"
+                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-[170px] flex flex-col items-center">
+        <p class="font-medium text-3xl">Why choose us</p>
+        <p class="font-normal text-[#666] px-32 m-4">
+          Modern consumer trends: Focus on top-selected services. Changing
+          business models to adapt to new consumer trends: Applying the latest
+          technology
+        </p>
+        <div class="m-16 flex gap-3">
+          <div class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px] " style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07);">
+            <img src="./img/Group/Group 8220.png" alt="" />
+            <p class="text-2xl font-medium text-center ">Professional</p>
+          </div>
+          <div class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px] " style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07);">
+            <img src="./img/Group/Group 8219.png" alt="" />
+            <p class="text-2xl font-medium text-center ">Fast</p>
+          </div>
+          <div class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]" style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07);">
+            <img src="./img/Group/Group 8218.png" alt="" />
+            <p class="text-2xl font-medium text-center ">Multi service</p>
+          </div>
+          <div class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]" style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07);">
+            <img src="./img/Group/Group 8217.png" alt="" />
+            <p class="text-2xl font-medium text-center ">Safety, quality</p>
+          </div>
+        </div>
+      </div>
+
+      
+    </main>
+  </body>
 </html>
