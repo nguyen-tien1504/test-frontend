@@ -18,6 +18,9 @@
         color: black;
         text-decoration: none;
       }
+      .serviceActive{
+        background-color: #277CFB !important;
+      }
     </style>
   </head>
   <body>
@@ -404,7 +407,7 @@
         <div class="flex justify-between items-center">
           <p class="text-4xl font-medium">Learn more about the service</p>
           <div class="flex gap-6">
-            <button class="bg-[#E2E2E2] rounded text-white p-2">
+            <button class="bg-[#E2E2E2] rounded text-white p-2" id="prevBtn">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -422,7 +425,7 @@
                 </svg>
               </span>
             </button>
-            <button class="bg-[#E2E2E2] rounded text-white p-2">
+            <button class="bg-[#E2E2E2] rounded text-white p-2" id="nextBtn">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -443,108 +446,381 @@
           </div>
         </div>
 
-        <div class="flex gap-3 items-center mt-16">
+        <div class="mt-9 relative w-full h-[500px] overflow-hidden">
           <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            service="0"
+            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+            data="list-service"
           >
-            <img src="./img/Group/outline.png" alt="" />
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-3">
-                <p class="text-2xl font-medium text-center">Cleaning</p>
-                <p
-                  class="font-normal text-base text-[#666666] text-center h-[72px]"
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/outline.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Cleaning</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
                 >
-                  Hiện đại và uy tính, Tạo không gian sống sạch đẹp
-                </p>
               </div>
-              <a
-                href=""
-                class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                >Tìm hiểu thêm</a
-              >
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/appliances.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Appliances</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319173.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Household</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319174.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Electronic</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
             </div>
           </div>
           <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            service="1"
+            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+            data="list-service"
           >
-            <img src="./img/Group/appliances.png" alt="" />
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-3">
-                <p class="text-2xl font-medium text-center">Appliances</p>
-                <p
-                  class="font-normal text-base text-[#666666] text-center h-[72px]"
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/outline.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Cleaning</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
                 >
-                  Experience ...
-                </p>
               </div>
-              <a
-                href=""
-                class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                >Tìm hiểu thêm</a
-              >
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/appliances.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Appliances</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319173.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Household</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319174.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Electronic</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
             </div>
           </div>
           <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            service="2"
+            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+            data="list-service"
           >
-            <img src="./img/Group/Group 427319173.png" alt="" />
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-3">
-                <p class="text-2xl font-medium text-center">Household</p>
-                <p
-                  class="font-normal text-base text-[#666666] text-center h-[72px]"
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/outline.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Cleaning</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
                 >
-                  Experience ...
-                </p>
               </div>
-              <a
-                href=""
-                class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                >Tìm hiểu thêm</a
-              >
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/appliances.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Appliances</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319173.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Household</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319174.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Electronic</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
             </div>
           </div>
           <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            service="3"
+            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+            data="list-service"
           >
-            <img src="./img/Group/Group 427319174.png" alt="" />
-            <div class="flex flex-col gap-4">
-              <div class="flex flex-col gap-3">
-                <p class="text-2xl font-medium text-center">Electronic</p>
-                <p
-                  class="font-normal text-base text-[#666666] text-center h-[72px]"
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/outline.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Cleaning</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
                 >
-                  Experience ...
-                </p>
               </div>
-              <a
-                href=""
-                class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                >Tìm hiểu thêm</a
-              >
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/appliances.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Appliances</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319173.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Household</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 427319174.png" alt="" />
+              <div class="flex flex-col gap-4">
+                <div class="flex flex-col gap-3">
+                  <p class="text-2xl font-medium text-center">Electronic</p>
+                  <p
+                    class="font-normal text-base text-[#666666] text-center h-[72px]"
+                  >
+                    Experience ...
+                  </p>
+                </div>
+                <a
+                  href=""
+                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                  >Tìm hiểu thêm</a
+                >
+              </div>
             </div>
           </div>
         </div>
-        <div class="flex justify-center gap-3 mt-9">
+
+        <div class="flex justify-center gap-3 mt">
           <button
-            class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+            class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%] "
+            data="list-service-btn"
           ></button>
           <button
             class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+            data="list-service-btn"
           ></button>
           <button
             class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+            data="list-service-btn"
           ></button>
           <button
             class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+            data="list-service-btn"
           ></button>
         </div>
       </div>
@@ -655,9 +931,7 @@
             and completely.
           </p>
           <form action="" class="py-3">
-            <div
-              class="flex border-solid border-[#E3E3E3] border rounded-lg"
-            >
+            <div class="flex border-solid border-[#E3E3E3] border rounded-lg">
               <input
                 type="text"
                 placeholder="Enter your email for consultation"
