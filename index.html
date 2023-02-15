@@ -18,14 +18,17 @@
         color: black;
         text-decoration: none;
       }
-      .serviceActive{
-        background-color: #277CFB !important;
+      .serviceActive {
+        background-color: #277cfb !important;
+      }
+      .headerMobile::after {
+        z-index: -1;
       }
     </style>
   </head>
   <body>
     <header
-      class="flex items-center gap-[240px] justify-center bg-[#383d40] py-2"
+      class="hidden items-center gap-[240px] justify-center bg-[#383d40] py-2 sm:flex"
     >
       <img
         src="./img/02d0f86ab2ac4d7f870a50b4e40fbd0f.jpg"
@@ -42,12 +45,44 @@
         </ul>
       </div>
     </header>
+    <header
+      class="sm:hidden block relative mr-6 after:absolute after:content-[''] after:inset-0 after:bg-[#000] after:opacity-[0.5] after:w-[500px] after:h-screen headerMobile"
+    >
+      <div class="flex items-center bg-[#277CFB] gap-24 pl-3">
+        <p class="text-white font-medium text-4xl">Menu</p>
+        <button class="text-white pt-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="40"
+            height="40"
+            fill="currentColor"
+            class="bi bi-x"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+            />
+          </svg>
+        </button>
+      </div>
+      <div class="pt-8 pb-32 pl-3 bg-white">
+        <ul
+          class="list-none flex flex-col gap-5 text-[#666666] text-lg leading-[25px]"
+        >
+          <li><a href="">Home</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">Blog</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+    </header>
 
-    <div class="relative">
+    <div class="relative hidden lg:block">
       <img
         src="./img/907e6e6909cece4a271d530553cd4c73.png"
         alt="banner"
-        class="w-full"
+        class="w-full hidden sm:block"
       />
       <div class="absolute bottom-48 left-1/2">
         <span
@@ -65,886 +100,1011 @@
       </div>
     </div>
 
-    <main class="px-[200px] mt-[150px]">
-      <iframe
-        src="https://www.youtube.com/embed/v660bnTDglM"
-        frameborder="1"
-        class="w-full h-[400px]"
-      ></iframe>
+    <main class="px-[200px] mt-[150px] relative " >
+      <div>
+        <iframe
+          src="https://www.youtube.com/embed/v660bnTDglM"
+          frameborder="1"
+          class="w-full h-[400px]"
+        ></iframe>
 
-      <div class="mt-[170px] flex gap-[50px] items-center">
-        <div class="relative">
-          <img
-            src="./img/iPhone 12 Mini.png"
-            alt="iPhone 12 Mini "
-            class="ml-36"
-          />
-          <img
-            src="./img/iPhone 12 Mini.png"
-            alt="iPhone 12 Mini"
-            class="absolute inset-0"
-          />
+        <div class="mt-[170px] flex gap-[50px] items-center">
+          <div class="relative">
+            <img
+              src="./img/iPhone 12 Mini.png"
+              alt="iPhone 12 Mini "
+              class="ml-36"
+            />
+            <img
+              src="./img/iPhone 12 Mini.png"
+              alt="iPhone 12 Mini"
+              class="absolute inset-0"
+            />
+          </div>
+          <div class="w-1/2">
+            <p class="font-medium text-4xl leading-10">Apps for customers</p>
+            <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
+              The general idea behind "diversification" is to provide a Service
+              ecosystem that fully caters to all customer needs from the
+              smallest needs
+            </p>
+            <div class="flex gap-8 mt-8">
+              <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
+              <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
+            </div>
+            <div class="flex justify-center mt-[42px]">
+              <a
+                href=""
+                class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
+                >See more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    stroke-width="6"
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="w-1/2">
-          <p class="font-medium text-4xl leading-10">Apps for customers</p>
-          <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
-            The general idea behind "diversification" is to provide a Service
-            ecosystem that fully caters to all customer needs from the smallest
-            needs
+
+        <div
+          class="bg-[#F2F8FF] flex flex-col items-center mt-20 py-8 px-[100px]"
+        >
+          <p class="font-medium text-4xl leading-10 py-16">
+            Outstanding features of the Client App
           </p>
-          <div class="flex gap-8 mt-8">
-            <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
-            <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
-          </div>
-          <div class="flex justify-center mt-[42px]">
-            <a
-              href=""
-              class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
-              >See more
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  stroke-width="6"
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </a>
+          <div class="flex gap-8 items-center">
+            <img
+              src="./img/iPhone 12 Mini.png"
+              alt=""
+              width="224px"
+              height="485.5px"
+            />
+            <div>
+              <div>
+                <div class="flex gap-4">
+                  <div class="flex flex-col items-center">
+                    <span
+                      class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                      >1</span
+                    >
+                    <div class="mt-1 flex flex-col items-center">
+                      <p
+                        class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
+                      ></p>
+                      <div class="text-[#666] -mt-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xl leading-8 font-normal">
+                      Search service in just one button
+                    </p>
+                    <p class="font-normal leading-6 text-[#666666]">
+                      Enjoy convenience in just one app.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex gap-4">
+                  <div class="flex flex-col items-center">
+                    <span
+                      class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                      >2</span
+                    >
+                    <div class="mt-1 flex flex-col items-center">
+                      <p
+                        class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
+                      ></p>
+                      <div class="text-[#666] -mt-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xl leading-8 font-normal">
+                      Connecting diverse information
+                    </p>
+                    <p class="font-normal leading-6 text-[#666666]">
+                      Not only chat now you can voice chat and make calls to
+                      quickly connect with the performer
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex gap-4">
+                  <div class="flex flex-col items-center">
+                    <span
+                      class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                      >3</span
+                    >
+                    <div class="mt-1 flex flex-col items-center">
+                      <p
+                        class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
+                      ></p>
+                      <div class="text-[#666] -mt-2">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-chevron-down"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <p class="text-xl leading-8 font-normal">
+                      Update status service
+                    </p>
+                    <p class="font-normal leading-6 text-[#666666]">
+                      You can know the status of repair or work completed while
+                      away from home.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="flex gap-4">
+                  <div class="flex flex-col items-center">
+                    <span
+                      class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
+                      >4</span
+                    >
+                  </div>
+                  <div>
+                    <p class="text-xl leading-8 font-normal">
+                      Complete safe and quality service
+                    </p>
+                    <p class="font-normal leading-6 text-[#666666]">
+                      You will feel secure when you see the report image and
+                      easily evaluate quality service whenever
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div
-        class="bg-[#F2F8FF] flex flex-col items-center mt-20 py-8 px-[100px]"
-      >
-        <p class="font-medium text-4xl leading-10 py-16">
-          Outstanding features of the Client App
-        </p>
-        <div class="flex gap-8 items-center">
-          <img
-            src="./img/iPhone 12 Mini.png"
-            alt=""
-            width="224px"
-            height="485.5px"
-          />
+        <div class="mt-[170px] flex flex-row-reverse gap-[50px] items-center">
+          <div class="relative">
+            <img
+              src="./img/iPhone 12 Mini.png"
+              alt="iPhone 12 Mini "
+              class="ml-36"
+            />
+            <img
+              src="./img/iPhone 12 Mini.png"
+              alt="iPhone 12 Mini"
+              class="absolute inset-0"
+            />
+          </div>
+          <div class="w-1/2">
+            <p class="font-medium text-4xl leading-10">Apps for Business</p>
+            <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
+              One of the advantages of Multi-Industry Services is that it helps
+              reduce the impact of unexpected fluctuations in any one industry.
+              Bringing diverse consumers to businesses
+            </p>
+            <div class="flex gap-8 mt-8">
+              <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
+              <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
+            </div>
+            <div class="flex justify-center mt-[42px]">
+              <a
+                href=""
+                class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
+                >See more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="currentColor"
+                  class="bi bi-chevron-down"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    stroke-width="6"
+                    fill-rule="evenodd"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[170px] flex gap-[50px] items-center">
           <div>
-            <div>
-              <div class="flex gap-4">
-                <div class="flex flex-col items-center">
-                  <span
-                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
-                    >1</span
-                  >
-                  <div class="mt-1 flex flex-col items-center">
-                    <p
-                      class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
-                    ></p>
-                    <div class="text-[#666] -mt-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <p class="text-xl leading-8 font-normal">
-                    Search service in just one button
-                  </p>
-                  <p class="font-normal leading-6 text-[#666666]">
-                    Enjoy convenience in just one app.
-                  </p>
-                </div>
-              </div>
+            <img
+              src="./img/Apple Macbook Pro 15_ Space Grey.png"
+              alt=""
+              width="450px"
+            />
+          </div>
+          <div class="w-1/2">
+            <p class="font-medium text-4xl leading-10">Apps for Managers</p>
+            <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
+              Each branch of service provides is independent of the other
+              business areas, but the activities of the services will be
+              reported to senior management of the company that owns the
+              application.
+            </p>
+            <div class="flex gap-8 mt-8">
+              <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
+              <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
             </div>
-            <div>
-              <div class="flex gap-4">
-                <div class="flex flex-col items-center">
-                  <span
-                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
-                    >2</span
-                  >
-                  <div class="mt-1 flex flex-col items-center">
-                    <p
-                      class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
-                    ></p>
-                    <div class="text-[#666] -mt-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <p class="text-xl leading-8 font-normal">
-                    Connecting diverse information
-                  </p>
-                  <p class="font-normal leading-6 text-[#666666]">
-                    Not only chat now you can voice chat and make calls to
-                    quickly connect with the performer
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="flex gap-4">
-                <div class="flex flex-col items-center">
-                  <span
-                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
-                    >3</span
-                  >
-                  <div class="mt-1 flex flex-col items-center">
-                    <p
-                      class="h-[90px] after:content-[''] border-[0.5px] border-black border-opacity-20 border-solid"
-                    ></p>
-                    <div class="text-[#666] -mt-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="16"
-                        height="16"
-                        fill="currentColor"
-                        class="bi bi-chevron-down"
-                        viewBox="0 0 16 16"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <p class="text-xl leading-8 font-normal">
-                    Update status service
-                  </p>
-                  <p class="font-normal leading-6 text-[#666666]">
-                    You can know the status of repair or work completed while
-                    away from home.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="flex gap-4">
-                <div class="flex flex-col items-center">
-                  <span
-                    class="mt-1 h-fit w-fit py-0 px-2 rounded-[50%] text-[#277CFB] border-2 border-[#277CFB] border-solid"
-                    >4</span
-                  >
-                </div>
-                <div>
-                  <p class="text-xl leading-8 font-normal">
-                    Complete safe and quality service
-                  </p>
-                  <p class="font-normal leading-6 text-[#666666]">
-                    You will feel secure when you see the report image and
-                    easily evaluate quality service whenever
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-[170px] flex flex-row-reverse gap-[50px] items-center">
-        <div class="relative">
-          <img
-            src="./img/iPhone 12 Mini.png"
-            alt="iPhone 12 Mini "
-            class="ml-36"
-          />
-          <img
-            src="./img/iPhone 12 Mini.png"
-            alt="iPhone 12 Mini"
-            class="absolute inset-0"
-          />
-        </div>
-        <div class="w-1/2">
-          <p class="font-medium text-4xl leading-10">Apps for Business</p>
-          <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
-            One of the advantages of Multi-Industry Services is that it helps
-            reduce the impact of unexpected fluctuations in any one industry.
-            Bringing diverse consumers to businesses
-          </p>
-          <div class="flex gap-8 mt-8">
-            <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
-            <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
-          </div>
-          <div class="flex justify-center mt-[42px]">
-            <a
-              href=""
-              class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
-              >See more
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  stroke-width="6"
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-[170px] flex gap-[50px] items-center">
-        <div>
-          <img
-            src="./img/Apple Macbook Pro 15_ Space Grey.png"
-            alt=""
-            width="450px"
-          />
-        </div>
-        <div class="w-1/2">
-          <p class="font-medium text-4xl leading-10">Apps for Managers</p>
-          <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
-            Each branch of service provides is independent of the other business
-            areas, but the activities of the services will be reported to senior
-            management of the company that owns the application.
-          </p>
-          <div class="flex gap-8 mt-8">
-            <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
-            <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
-          </div>
-          <div class="flex justify-center mt-[42px]">
-            <a
-              href=""
-              class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
-              >See more
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-chevron-down"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  stroke-width="6"
-                  fill-rule="evenodd"
-                  d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
-                />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-[170px] flex flex-col items-center">
-        <p class="font-medium text-3xl">Why choose us</p>
-        <p class="font-normal text-[#666] px-32 m-4">
-          Modern consumer trends: Focus on top-selected services. Changing
-          business models to adapt to new consumer trends: Applying the latest
-          technology
-        </p>
-        <div class="m-16 flex gap-3">
-          <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-          >
-            <img src="./img/Group/Group 8220.png" alt="" />
-            <p class="text-2xl font-medium text-center">Professional</p>
-          </div>
-          <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-          >
-            <img src="./img/Group/Group 8219.png" alt="" />
-            <p class="text-2xl font-medium text-center">Fast</p>
-          </div>
-          <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-          >
-            <img src="./img/Group/Group 8218.png" alt="" />
-            <p class="text-2xl font-medium text-center">Multi service</p>
-          </div>
-          <div
-            class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
-            style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-          >
-            <img src="./img/Group/Group 8217.png" alt="" />
-            <p class="text-2xl font-medium text-center">Safety, quality</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-[170px]">
-        <div class="flex justify-between items-center">
-          <p class="text-4xl font-medium">Learn more about the service</p>
-          <div class="flex gap-6">
-            <button class="bg-[#E2E2E2] rounded text-white p-2" id="prevBtn">
-              <span>
+            <div class="flex justify-center mt-[42px]">
+              <a
+                href=""
+                class="flex items-center gap-2 underline font-medium text-xl text-[#277CFB]"
+                >See more
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
+                  width="16"
+                  height="16"
                   fill="currentColor"
-                  class="bi bi-chevron-left"
-                  viewBox="0 0 16 16"
-                  stroke-width="7"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-                  />
-                </svg>
-              </span>
-            </button>
-            <button class="bg-[#E2E2E2] rounded text-white p-2" id="nextBtn">
-              <span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  fill="currentColor"
-                  class="bi bi-chevron-right"
-                  stroke-width="7"
+                  class="bi bi-chevron-down"
                   viewBox="0 0 16 16"
                 >
                   <path
+                    stroke-width="6"
                     fill-rule="evenodd"
-                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                   />
                 </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-
-        <div class="mt-9 relative w-full h-[500px] overflow-hidden">
-          <div
-            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
-            data="list-service"
-          >
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/outline.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Cleaning</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/appliances.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Appliances</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319173.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Household</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319174.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Electronic</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
-            data="list-service"
-          >
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/outline.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Cleaning</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/appliances.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Appliances</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319173.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Household</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319174.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Electronic</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
-            data="list-service"
-          >
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/outline.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Cleaning</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/appliances.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Appliances</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319173.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Household</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319174.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Electronic</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="flex gap-3 items-center absolute w-full h-full transition duration-500"
-            data="list-service"
-          >
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/outline.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Cleaning</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Hiện đại và uy tính, Tạo không gian sống sạch đẹp
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/appliances.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Appliances</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319173.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Household</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
-            </div>
-            <div
-              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
-              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
-            >
-              <img src="./img/Group/Group 427319174.png" alt="" />
-              <div class="flex flex-col gap-4">
-                <div class="flex flex-col gap-3">
-                  <p class="text-2xl font-medium text-center">Electronic</p>
-                  <p
-                    class="font-normal text-base text-[#666666] text-center h-[72px]"
-                  >
-                    Experience ...
-                  </p>
-                </div>
-                <a
-                  href=""
-                  class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
-                  >Tìm hiểu thêm</a
-                >
-              </div>
+              </a>
             </div>
           </div>
         </div>
 
-        <div class="flex justify-center gap-3 mt">
-          <button
-            class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%] "
-            data="list-service-btn"
-          ></button>
-          <button
-            class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
-            data="list-service-btn"
-          ></button>
-          <button
-            class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
-            data="list-service-btn"
-          ></button>
-          <button
-            class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
-            data="list-service-btn"
-          ></button>
-        </div>
-      </div>
-
-      <div class="mt-[170px]">
-        <p class="font-medium text-3xl text-center">Top businesses</p>
-        <p class="font-normal text-[#666] px-32 m-4 text-center">
-          Accompanying the application is indispensable for businesses that play
-          a great role and contribute to the ecosystem. The same goal becomes
-          the spearhead in some areas.
-        </p>
-        <div class="flex gap-3 mt-10">
-          <div class="basis-6/12">
-            <img src="./img/Why choose us/Rectangle 3468.png" alt="" ">
-          </div>
-          <div class="basis-6/12">
-            <img src="./img/Why choose us/Rectangle 3469.png" alt="" />
-          </div>
-          <div class="basis-6/12">
-            <img src="./img/Why choose us/Rectangle 3470.png" alt="" />
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-[170px]">
-        <p class="font-medium text-3xl text-center">Business Feedback</p>
-        <p class="font-normal text-[#666] px-32 m-4 text-center">
-          Sharing from associates experience with iService
-        </p>
-        <div class="flex gap-3">
-          <div
-            style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
-            class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
-          >
-            <div class="flex gap-1 items-center">
-              <img src="./img/people/Ellipse 904.png" alt="" />
-              <div>
-                <p class="font-medium text-2xl">John K.</p>
-                <p class="font-medium text-base">La pasteria</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-            </div>
-            <div class="font-normal text-base">
-              The reports and orders for each service are very specific. Is an
-              application worth sustainable cooperation.
-            </div>
-          </div>
-          <div
-            style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
-            class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
-          >
-            <div class="flex gap-1 items-center">
-              <img src="./img/people/Ellipse 905.png" alt="" />
-              <div>
-                <p class="font-medium text-2xl">Esther Howard</p>
-                <p class="font-medium text-base">La pasteria</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star1.png" alt="" />
-            </div>
-            <div class="font-normal text-base">
-              The reports and orders for each service are very specific. Is an
-              application worth sustainable cooperation.
-            </div>
-          </div>
-          <div
-            style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
-            class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
-          >
-            <div class="flex gap-1 items-center">
-              <img src="./img/people/Ellipse 906.png" alt="" />
-              <div>
-                <p class="font-medium text-2xl">Robert Fox</p>
-                <p class="font-medium text-base">La pasteria</p>
-              </div>
-            </div>
-            <div class="flex gap-3">
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-              <img src="./img/people/Star.png" alt="" />
-            </div>
-            <div class="font-normal text-base">
-              The reports and orders for each service are very specific. Is an
-              application worth sustainable cooperation.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-[100px]">
-        <p class="font-normal text-3xl">Contact us</p>
-        <div class="flex gap-6 mt-3 items-center">
-          <p class="font-normal text-base" style="color: rgba(18, 18, 54, 0.3)">
-            Please connect with us for answers and service experience completely
-            and completely.
+        <div class="mt-[170px] flex flex-col items-center">
+          <p class="font-medium text-3xl">Why choose us</p>
+          <p class="font-normal text-[#666] px-32 m-4">
+            Modern consumer trends: Focus on top-selected services. Changing
+            business models to adapt to new consumer trends: Applying the latest
+            technology
           </p>
-          <form action="" class="py-3">
-            <div class="flex border-solid border-[#E3E3E3] border rounded-lg">
-              <input
-                type="text"
-                placeholder="Enter your email for consultation"
-                class="font-medium text-base px-9 w-[350px]"
-                style="color: rgba(18, 18, 54, 0.3)"
-              />
-              <button
-                class="text-base font-normal text-white bg-[#277CFB] px-9 text-center rounded-r-lg"
-              >
-                Đăng ký
+          <div class="m-16 flex gap-3">
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 8220.png" alt="" />
+              <p class="text-2xl font-medium text-center">Professional</p>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 8219.png" alt="" />
+              <p class="text-2xl font-medium text-center">Fast</p>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 8218.png" alt="" />
+              <p class="text-2xl font-medium text-center">Multi service</p>
+            </div>
+            <div
+              class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
+              style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+            >
+              <img src="./img/Group/Group 8217.png" alt="" />
+              <p class="text-2xl font-medium text-center">Safety, quality</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[170px]">
+          <div class="flex justify-between items-center">
+            <p class="text-4xl font-medium">Learn more about the service</p>
+            <div class="flex gap-6">
+              <button class="bg-[#E2E2E2] rounded text-white p-2" id="prevBtn">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    class="bi bi-chevron-left"
+                    viewBox="0 0 16 16"
+                    stroke-width="7"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
+                    />
+                  </svg>
+                </span>
+              </button>
+              <button class="bg-[#E2E2E2] rounded text-white p-2" id="nextBtn">
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="22"
+                    height="22"
+                    fill="currentColor"
+                    class="bi bi-chevron-right"
+                    stroke-width="7"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+                    />
+                  </svg>
+                </span>
               </button>
             </div>
-          </form>
+          </div>
+
+          <div class="mt-9 relative w-full h-[500px] overflow-hidden">
+            <div
+              class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+              data="list-service"
+            >
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/outline.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Cleaning</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/appliances.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Appliances</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319173.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Household</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319174.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Electronic</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+              data="list-service"
+            >
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/outline.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Cleaning</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/appliances.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Appliances</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319173.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Household</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319174.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Electronic</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+              data="list-service"
+            >
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/outline.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Cleaning</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/appliances.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Appliances</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319173.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Household</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319174.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Electronic</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex gap-3 items-center absolute w-full h-full transition duration-500"
+              data="list-service"
+            >
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/outline.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Cleaning</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Hiện đại và uy tính, Tạo không gian sống sạch đẹp
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/appliances.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Appliances</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319173.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Household</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+              <div
+                class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[345px]"
+                style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
+              >
+                <img src="./img/Group/Group 427319174.png" alt="" />
+                <div class="flex flex-col gap-4">
+                  <div class="flex flex-col gap-3">
+                    <p class="text-2xl font-medium text-center">Electronic</p>
+                    <p
+                      class="font-normal text-base text-[#666666] text-center h-[72px]"
+                    >
+                      Experience ...
+                    </p>
+                  </div>
+                  <a
+                    href=""
+                    class="w-full bg-[#277CFB] rounded-[35px] py-2 px-5 text-white text-center"
+                    >Tìm hiểu thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center gap-3 mt">
+            <button
+              class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+              data="list-service-btn"
+            ></button>
+            <button
+              class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+              data="list-service-btn"
+            ></button>
+            <button
+              class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+              data="list-service-btn"
+            ></button>
+            <button
+              class="h-[14px] w-[14px] bg-[#E2E2E2] inline-block rounded-[50%]"
+              data="list-service-btn"
+            ></button>
+          </div>
+        </div>
+
+        <div class="mt-[170px]">
+          <p class="font-medium text-3xl text-center">Top businesses</p>
+          <p class="font-normal text-[#666] px-32 m-4 text-center">
+            Accompanying the application is indispensable for businesses that
+            play a great role and contribute to the ecosystem. The same goal
+            becomes the spearhead in some areas.
+          </p>
+          <div class="flex gap-3 mt-10">
+            <div class="basis-6/12">
+              <img src="./img/Why choose us/Rectangle 3468.png" alt="" ">
+            </div>
+            <div class="basis-6/12">
+              <img src="./img/Why choose us/Rectangle 3469.png" alt="" />
+            </div>
+            <div class="basis-6/12">
+              <img src="./img/Why choose us/Rectangle 3470.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[170px]">
+          <p class="font-medium text-3xl text-center">Business Feedback</p>
+          <p class="font-normal text-[#666] px-32 m-4 text-center">
+            Sharing from associates experience with iService
+          </p>
+          <div class="flex gap-3">
+            <div
+              style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
+              class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
+            >
+              <div class="flex gap-1 items-center">
+                <img src="./img/people/Ellipse 904.png" alt="" />
+                <div>
+                  <p class="font-medium text-2xl">John K.</p>
+                  <p class="font-medium text-base">La pasteria</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+              </div>
+              <div class="font-normal text-base">
+                The reports and orders for each service are very specific. Is an
+                application worth sustainable cooperation.
+              </div>
+            </div>
+            <div
+              style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
+              class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
+            >
+              <div class="flex gap-1 items-center">
+                <img src="./img/people/Ellipse 905.png" alt="" />
+                <div>
+                  <p class="font-medium text-2xl">Esther Howard</p>
+                  <p class="font-medium text-base">La pasteria</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star1.png" alt="" />
+              </div>
+              <div class="font-normal text-base">
+                The reports and orders for each service are very specific. Is an
+                application worth sustainable cooperation.
+              </div>
+            </div>
+            <div
+              style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
+              class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
+            >
+              <div class="flex gap-1 items-center">
+                <img src="./img/people/Ellipse 906.png" alt="" />
+                <div>
+                  <p class="font-medium text-2xl">Robert Fox</p>
+                  <p class="font-medium text-base">La pasteria</p>
+                </div>
+              </div>
+              <div class="flex gap-3">
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+                <img src="./img/people/Star.png" alt="" />
+              </div>
+              <div class="font-normal text-base">
+                The reports and orders for each service are very specific. Is an
+                application worth sustainable cooperation.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mt-[100px] py-20 px-16 rounded"
+          style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
+        >
+          <p class="font-normal text-3xl">Contact us</p>
+          <div class="flex gap-6 mt-3 items-center">
+            <p
+              class="font-normal text-base"
+              style="color: rgba(18, 18, 54, 0.3)"
+            >
+              Please connect with us for answers and service experience
+              completely and completely.
+            </p>
+            <form action="" class="py-3">
+              <div class="flex border-solid border-[#E3E3E3] border rounded-lg">
+                <input
+                  type="text"
+                  placeholder="Enter your email for consultation"
+                  class="font-medium text-base px-4 w-[300px]"
+                  style="color: rgba(18, 18, 54, 0.3)"
+                />
+                <button
+                  class="text-base font-normal text-white bg-[#277CFB] px-9 text-center rounded-r-lg"
+                >
+                  Đăng ký
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div
+        class="bg-[#383D40] text-white pt-24 pb-10 absolute top-full left-0  w-full -mt-[50px]"
+        style="z-index: -1;"
+      >
+        <div class="flex gap-20 pl-[200px]">
+          <div class="flex flex-col gap-6 pt-12">
+            <p class="font-bold text-4xl">Brandname</p>
+            <p class="font-medium text-xl">Follow us:</p>
+            <div class="flex gap-4">
+              <img src="./img/brand name/Group 1012.png" alt="" />
+              <img src="./img/brand name/Group 1017.png" alt="" />
+              <img src="./img/brand name/Group 8198.png" alt="" />
+            </div>
+          </div>
+          <div class="flex flex-col">
+            <p class="font-medium">Home</p>
+            <div class="flex flex-col gap-4 pt-6">
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >About us</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Intro</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Features</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Pricing</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-medium">Suppor</p>
+            <div class="flex flex-col gap-4 pt-6">
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Shipping & Returns</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Contact Us</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Our Partners</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-medium">Resources</p>
+            <div class="flex flex-col gap-4 pt-6">
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Our Work</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Servicrs</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >FAQ</a
+              >
+            </div>
+          </div>
+          <div>
+            <p class="font-medium">Contact us</p>
+            <div class="flex flex-col gap-4 pt-6">
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >About Us</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Menu</a
+              >
+              <a
+                href=""
+                class="font-normal text-base"
+                style="color: rgba(255, 255, 255, 0.9)"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center text-base font-medium mt-20">
+          <p>(c) 2023 - Delicious, All rights reserved.</p>
         </div>
       </div>
     </main>
