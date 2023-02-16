@@ -64,3 +64,19 @@ serviceSpanBtn.forEach((item, indx) => {
     });
   });
 });
+
+let menuMobile = false;
+const menuMobileBtn = document.querySelectorAll("[navbar-menu=mobile]");
+console.log(menuMobileBtn)
+const navbarScreenMobile = document.querySelector("[navbar-screen=mobile]");
+navbarScreenMobile.style.display = "none";
+menuMobileBtn.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (menuMobile) {
+      navbarScreenMobile.style.display = "none";
+    } else {
+      navbarScreenMobile.style.display = "block";
+    }
+    menuMobile = !menuMobile;
+  });
+});

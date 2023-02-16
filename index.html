@@ -21,14 +21,12 @@
       .serviceActive {
         background-color: #277cfb !important;
       }
-      .headerMobile::after {
-        z-index: -1;
-      }
     </style>
   </head>
   <body>
     <header
-      class="hidden items-center gap-[240px] justify-center bg-[#383d40] py-2 sm:flex"
+      class="flex items-center gap-[240px] justify-center bg-[#383d40] py-2"
+      navbar-screen="laptop"
     >
       <img
         src="./img/02d0f86ab2ac4d7f870a50b4e40fbd0f.jpg"
@@ -45,46 +43,65 @@
         </ul>
       </div>
     </header>
-    <header
-      class="sm:hidden block relative mr-6 after:absolute after:content-[''] after:inset-0 after:bg-[#000] after:opacity-[0.5] after:w-[500px] after:h-screen headerMobile"
+    <button class="hidden" navbar-menu="mobile">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        />
+      </svg>
+    </button>
+    <div
+      class="relative hidden w-screen h-[540px] after:absolute after:content-[''] after:inset-0 after:bg-[#000] after:opacity-[0.5]"
+      navbar-screen="mobile"
     >
-      <div class="flex items-center bg-[#277CFB] gap-24 pl-3">
-        <p class="text-white font-medium text-4xl">Menu</p>
-        <button class="text-white pt-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="40"
-            height="40"
-            fill="currentColor"
-            class="bi bi-x"
-            viewBox="0 0 16 16"
+      <header class="relative mr-6">
+        <div class="flex items-center bg-[#277CFB] gap-24 pl-3">
+          <p class="text-white font-medium text-4xl">Menu</p>
+          
+          <button class="text-white pt-2" navbar-menu="mobile">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="40"
+              height="40"
+              fill="currentColor"
+              class="bi bi-x"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="pt-8 pb-32 pl-3 bg-white">
+          <ul
+            class="list-none flex flex-col gap-5 text-[#666666] text-lg leading-[25px]"
           >
-            <path
-              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
-        </button>
-      </div>
-      <div class="pt-8 pb-32 pl-3 bg-white">
-        <ul
-          class="list-none flex flex-col gap-5 text-[#666666] text-lg leading-[25px]"
-        >
-          <li><a href="">Home</a></li>
-          <li><a href="">Product</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Blog</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
-    </header>
+            <li><a href="">Home</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Services</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </header>
+    </div>
 
-    <div class="relative hidden lg:block">
+    <div class="relative">
       <img
         src="./img/907e6e6909cece4a271d530553cd4c73.png"
         alt="banner"
-        class="w-full hidden sm:block"
+        class="w-full"
       />
-      <div class="absolute bottom-48 left-1/2">
+      <div class="absolute bottom-48 left-1/2" navbar-img="mobile">
         <span
           class="h-[14px] w-[14px] bg-white inline-block rounded-[50%]"
         ></span>
@@ -100,7 +117,7 @@
       </div>
     </div>
 
-    <main class="px-[200px] mt-[150px] relative " >
+    <main class="px-[200px] mt-[150px] relative">
       <div>
         <iframe
           src="https://www.youtube.com/embed/v660bnTDglM"
@@ -109,7 +126,7 @@
         ></iframe>
 
         <div class="mt-[170px] flex gap-[50px] items-center">
-          <div class="relative">
+          <div class="relative" main-body-img="mobile">
             <img
               src="./img/iPhone 12 Mini.png"
               alt="iPhone 12 Mini "
@@ -121,7 +138,7 @@
               class="absolute inset-0"
             />
           </div>
-          <div class="w-1/2">
+          <div class="w-1/2" main-body="customer">
             <p class="font-medium text-4xl leading-10">Apps for customers</p>
             <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
               The general idea behind "diversification" is to provide a Service
@@ -158,6 +175,7 @@
 
         <div
           class="bg-[#F2F8FF] flex flex-col items-center mt-20 py-8 px-[100px]"
+          main-body-features="mobile"
         >
           <p class="font-medium text-4xl leading-10 py-16">
             Outstanding features of the Client App
@@ -168,6 +186,7 @@
               alt=""
               width="224px"
               height="485.5px"
+              main-body-img="mobile"
             />
             <div>
               <div>
@@ -310,7 +329,7 @@
         </div>
 
         <div class="mt-[170px] flex flex-row-reverse gap-[50px] items-center">
-          <div class="relative">
+          <div class="relative" main-body-img="mobile">
             <img
               src="./img/iPhone 12 Mini.png"
               alt="iPhone 12 Mini "
@@ -322,13 +341,25 @@
               class="absolute inset-0"
             />
           </div>
-          <div class="w-1/2">
+          <div class="w-1/2" main-body="customer">
             <p class="font-medium text-4xl leading-10">Apps for Business</p>
             <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
               One of the advantages of Multi-Industry Services is that it helps
               reduce the impact of unexpected fluctuations in any one industry.
               Bringing diverse consumers to businesses
             </p>
+            <div class="relative hidden" main-body-img-business="mobile">
+              <img
+                src="./img/iPhone 12 Mini.png"
+                alt="iPhone 12 Mini "
+                class="ml-36"
+              />
+              <img
+                src="./img/iPhone 12 Mini.png"
+                alt="iPhone 12 Mini"
+                class="absolute inset-0"
+              />
+            </div>
             <div class="flex gap-8 mt-8">
               <a href=""> <img src="./img/pngegg (1) 1.png" alt="" /></a>
               <a href=""><img src="./img/pngegg (2) 1.png" alt="" /></a>
@@ -357,7 +388,10 @@
           </div>
         </div>
 
-        <div class="mt-[170px] flex gap-[50px] items-center">
+        <div
+          class="mt-[170px] flex gap-[50px] items-center"
+          main-body="customer"
+        >
           <div>
             <img
               src="./img/Apple Macbook Pro 15_ Space Grey.png"
@@ -365,7 +399,7 @@
               width="450px"
             />
           </div>
-          <div class="w-1/2">
+          <div class="w-1/2" main-body="customer">
             <p class="font-medium text-4xl leading-10">Apps for Managers</p>
             <p class="text-xl leading-8 font-normal text-[#666] pt-[37px]">
               Each branch of service provides is independent of the other
@@ -403,12 +437,15 @@
 
         <div class="mt-[170px] flex flex-col items-center">
           <p class="font-medium text-3xl">Why choose us</p>
-          <p class="font-normal text-[#666] px-32 m-4">
+          <p
+            class="font-normal text-[#666] px-32 m-4"
+            main-body-features="mobile"
+          >
             Modern consumer trends: Focus on top-selected services. Changing
             business models to adapt to new consumer trends: Applying the latest
             technology
           </p>
-          <div class="m-16 flex gap-3">
+          <div class="m-16 flex gap-3" main-body="why choose us">
             <div
               class="flex flex-col px-[30px] py-[30px] gap-10 items-center rounded-[15px] w-[270px] h-[226px]"
               style="box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.07)"
@@ -440,7 +477,7 @@
           </div>
         </div>
 
-        <div class="mt-[170px]">
+        <div class="mt-[170px]" main-body-features="mobile">
           <div class="flex justify-between items-center">
             <p class="text-4xl font-medium">Learn more about the service</p>
             <div class="flex gap-6">
@@ -864,14 +901,17 @@
 
         <div class="mt-[170px]">
           <p class="font-medium text-3xl text-center">Top businesses</p>
-          <p class="font-normal text-[#666] px-32 m-4 text-center">
+          <p
+            class="font-normal text-[#666] px-32 m-4 text-center"
+            main-body-features="mobile"
+          >
             Accompanying the application is indispensable for businesses that
             play a great role and contribute to the ecosystem. The same goal
             becomes the spearhead in some areas.
           </p>
           <div class="flex gap-3 mt-10">
             <div class="basis-6/12">
-              <img src="./img/Why choose us/Rectangle 3468.png" alt="" ">
+              <img src="./img/Why choose us/Rectangle 3468.png" alt="" />
             </div>
             <div class="basis-6/12">
               <img src="./img/Why choose us/Rectangle 3469.png" alt="" />
@@ -884,22 +924,25 @@
 
         <div class="mt-[170px]">
           <p class="font-medium text-3xl text-center">Business Feedback</p>
-          <p class="font-normal text-[#666] px-32 m-4 text-center">
+          <p
+            class="font-normal text-[#666] px-32 m-4 text-center"
+            main-body-features="mobile"
+          >
             Sharing from associates experience with iService
           </p>
-          <div class="flex gap-3">
+          <div class="flex gap-3" main-body="feedback">
             <div
               style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
               class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
             >
-              <div class="flex gap-1 items-center">
+              <div class="flex gap-1 items-center" main-img="feedback img">
                 <img src="./img/people/Ellipse 904.png" alt="" />
                 <div>
                   <p class="font-medium text-2xl">John K.</p>
                   <p class="font-medium text-base">La pasteria</p>
                 </div>
               </div>
-              <div class="flex gap-3">
+              <div class="flex gap-3" main-img="feedback img">
                 <img src="./img/people/Star.png" alt="" />
                 <img src="./img/people/Star.png" alt="" />
                 <img src="./img/people/Star.png" alt="" />
@@ -907,22 +950,24 @@
                 <img src="./img/people/Star.png" alt="" />
               </div>
               <div class="font-normal text-base">
-                The reports and orders for each service are very specific. Is an
-                application worth sustainable cooperation.
+                <p>
+                  The reports and orders for each service are very specific. Is
+                  an application worth sustainable cooperation.
+                </p>
               </div>
             </div>
             <div
               style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
               class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
             >
-              <div class="flex gap-1 items-center">
+              <div class="flex gap-1 items-center" main-img="feedback img">
                 <img src="./img/people/Ellipse 905.png" alt="" />
                 <div>
                   <p class="font-medium text-2xl">Esther Howard</p>
                   <p class="font-medium text-base">La pasteria</p>
                 </div>
               </div>
-              <div class="flex gap-3">
+              <div class="flex gap-3" main-img="feedback img">
                 <img src="./img/people/Star.png" alt="" />
                 <img src="./img/people/Star.png" alt="" />
                 <img src="./img/people/Star.png" alt="" />
@@ -930,22 +975,24 @@
                 <img src="./img/people/Star1.png" alt="" />
               </div>
               <div class="font-normal text-base">
-                The reports and orders for each service are very specific. Is an
-                application worth sustainable cooperation.
+                <p>
+                  The reports and orders for each service are very specific. Is
+                  an application worth sustainable cooperation.
+                </p>
               </div>
             </div>
             <div
               style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
               class="flex flex-col gap-5 w-[370px] h-[300px] rounded-xl px-9 pt-9 pb-10"
             >
-              <div class="flex gap-1 items-center">
+              <div class="flex gap-1 items-center" main-img="feedback img">
                 <img src="./img/people/Ellipse 906.png" alt="" />
                 <div>
                   <p class="font-medium text-2xl">Robert Fox</p>
                   <p class="font-medium text-base">La pasteria</p>
                 </div>
               </div>
-              <div class="flex gap-3">
+              <div class="flex gap-3" main-img="feedback img">
                 <img src="./img/people/Star.png" alt="" />
                 <img src="./img/people/Star.png" alt="" />
                 <img src="./img/people/Star.png" alt="" />
@@ -953,8 +1000,10 @@
                 <img src="./img/people/Star.png" alt="" />
               </div>
               <div class="font-normal text-base">
-                The reports and orders for each service are very specific. Is an
-                application worth sustainable cooperation.
+                <p>
+                  The reports and orders for each service are very specific. Is
+                  an application worth sustainable cooperation.
+                </p>
               </div>
             </div>
           </div>
@@ -962,9 +1011,10 @@
         <div
           class="mt-[100px] py-20 px-16 rounded bg-white"
           style="box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.07)"
+          main-body="contact us"
         >
           <p class="font-normal text-3xl">Contact us</p>
-          <div class="flex gap-6 mt-3 items-center">
+          <div class="flex gap-6 mt-3 items-center" main-body="contact us">
             <p
               class="font-normal text-base"
               style="color: rgba(18, 18, 54, 0.3)"
@@ -973,7 +1023,10 @@
               completely and completely.
             </p>
             <form action="" class="py-3">
-              <div class="flex border-solid border-[#E3E3E3] border rounded-lg">
+              <div
+                class="flex border-solid border-[#E3E3E3] border rounded-lg"
+                main-body="contact us"
+              >
                 <input
                   type="text"
                   placeholder="Enter your email for consultation"
@@ -991,10 +1044,10 @@
         </div>
       </div>
       <div
-        class="bg-[#383D40] text-white pt-24 pb-10 absolute top-full left-0  w-full -mt-[50px]"
-        style="z-index: -1;"
+        class="bg-[#383D40] text-white pt-24 pb-10 absolute top-full left-0 w-full -mt-[50px]"
+        style="z-index: -1"
       >
-        <div class="flex gap-20 pl-[200px]">
+        <div class="flex gap-20 pl-[200px]" main-body="footer">
           <div class="flex flex-col gap-6 pt-12">
             <p class="font-bold text-4xl">Brandname</p>
             <p class="font-medium text-xl">Follow us:</p>
@@ -1006,7 +1059,7 @@
           </div>
           <div class="flex flex-col">
             <p class="font-medium">Home</p>
-            <div class="flex flex-col gap-4 pt-6">
+            <div class="flex flex-col gap-4 pt-6" main-body="footer links">
               <a
                 href=""
                 class="font-normal text-base"
@@ -1035,7 +1088,7 @@
           </div>
           <div>
             <p class="font-medium">Suppor</p>
-            <div class="flex flex-col gap-4 pt-6">
+            <div class="flex flex-col gap-4 pt-6" main-body="footer links">
               <a
                 href=""
                 class="font-normal text-base"
@@ -1058,7 +1111,7 @@
           </div>
           <div>
             <p class="font-medium">Resources</p>
-            <div class="flex flex-col gap-4 pt-6">
+            <div class="flex flex-col gap-4 pt-6" main-body="footer links">
               <a
                 href=""
                 class="font-normal text-base"
@@ -1081,7 +1134,7 @@
           </div>
           <div>
             <p class="font-medium">Contact us</p>
-            <div class="flex flex-col gap-4 pt-6">
+            <div class="flex flex-col gap-4 pt-6" main-body="footer links">
               <a
                 href=""
                 class="font-normal text-base"
@@ -1109,6 +1162,7 @@
       </div>
     </main>
 
+    <link rel="stylesheet" href="./resposive.css" />
     <script src="./index.js"></script>
   </body>
 </html>

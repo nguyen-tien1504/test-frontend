@@ -1,0 +1,115 @@
+@media only screen and (max-width: 414px) {
+  body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 12px;
+    height: screen;
+  }
+
+  [navbar-screen="laptop"] {
+    display: none;
+  }
+  [navbar-screen="mobile"] {
+    display: block;
+  }
+  [navbar-screen="mobile"] header {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+  }
+  [navbar-menu="mobile"] {
+    display: block;
+  }
+  [navbar-screen="mobile"]::after {
+    z-index: -1;
+  }
+  [navbar-img="mobile"] {
+    display: none;
+  }
+  main {
+    padding: 0px !important;
+    margin-top: 50px !important;
+  }
+  [main-body="customer"] {
+    display: flex;
+    flex-direction: column;
+    padding: 0 16px;
+    width: 100%;
+  }
+  [main-body-img="mobile"] {
+    display: none;
+  }
+  [main-body-features="mobile"] {
+    padding: 0 16px;
+  }
+  [main-body-img-business="mobile"] {
+    display: flex;
+    width: 40%;
+    align-items: center;
+  }
+  [main-body-img-business="mobile"] img:first-child {
+    margin-left: 100px;
+  }
+  [main-body="why choose us"] {
+    margin: 0;
+    flex-direction: column;
+  }
+  [data="list-service"] {
+    width: 100%;
+  }
+  [data="list-service"] > div {
+    width: 25%;
+    height: 50%;
+    padding: 0;
+  }
+  [data="list-service"] img {
+    width: 75%;
+  }
+  [data="list-service"] p {
+    font-size: 12px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  [data="list-service"] a {
+    padding: 0px 0px;
+  }
+  [main-body="feedback"] {
+    flex-direction: column;
+  }
+  [main-body="feedback"] > div {
+    width: 100%;
+    height: 100%;
+  }
+  [main-img="feedback"] p {
+    font-size: 10px;
+    font-weight: 200;
+  }
+  [main-img="feedback img"] {
+    width: 100%;
+    height: 50%;
+  }
+  [main-body="contact us"] {
+    display: flex;
+    flex-direction: column;
+  }
+  [main-body="contact us"] input {
+    width: fit-content;
+    padding: 5px;
+  }
+  [main-body="contact us"] button {
+    border-radius: 8px;
+  }
+  [main-body="footer"] {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  [main-body="footer links"] {
+    padding-top: 16px;
+  }
+}
